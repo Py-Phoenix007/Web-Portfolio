@@ -8,36 +8,54 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to Phoenix Portfolio</h1>
+        <h1>Phoenix Portfolio</h1>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="about">
+    <section id="about" class="container">
         <h2>About Me</h2>
-        <p>Hello! I am a passionate developer and designer. Welcome to my portfolio.</p>
+        <p>Hello! I'm a highly motivated and confident individual who loves tackling challenges head-on. Drawing inspiration from the world of Naruto, I believe in never giving up and always pushing my limits. I enjoy coding and have a passion for creating and testing my own Python code. Currently, I'm diving into web development, learning HTML and CSS, and applying my skills to build projects like this portfolio. I'm excited to continue expanding my knowledge and taking on new challenges!</p>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="container">
         <h2>Projects</h2>
+        
         <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of project 1.</p>
+            <h3>Project 1: Python Pair Finder</h3>
+            <p>This project is a Python program I created to find pairs of numbers in a list that sum up to a given target, with no duplicate pairs. It’s a simple yet efficient way to practice logical thinking and Python programming.</p>
+            
+            <h4>Code:</h4>
+            <pre><code>
+def find_pairs(lst, target):
+    lst = list(set(lst))
+    output = []
+    for i in range(len(lst)):
+        complement = target - lst[i]
+        if complement in lst[i+1:]:
+            output.append((lst[i], complement))
+    print(output)
+            
+lst = [1, 2, 3, 4, 3, 2, 1]
+target = 5
+find_pairs(lst, target)
+            </code></pre>
+            
+            <h4>Output:</h4>
+            <p>This code outputs the pairs of numbers that add up to the target value without any duplicates.</p>
         </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of project 2.</p>
-        </div>
+        
+        <!-- Add more projects here if you have them -->
     </section>
 
-    <section id="contact">
+    <section id="contact" class="container">
         <h2>Contact</h2>
-        <p>Feel free to reach out to me via email at example@example.com.</p>
+        <p>If you would like to get in touch, please reach out via email at <a href="mailto:example@example.com">example@example.com</a>.</p>
     </section>
 
     <footer>
